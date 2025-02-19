@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62A95A47-1E83-467F-B2F8-D3D859D54E44}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BeatSaberDiscordMod</RootNamespace>
+    <AssemblyName>BeatSaberDiscordMod</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <LocalRefsDir Condition="Exists('..\Refs')">..\Refs</LocalRefsDir>
+    <BeatSaberDir>$(LocalRefsDir)</BeatSaberDir>
+    <AppOutputBase>$(MSBuildProjectDirectory)\</AppOutputBase>
+    <!--<PathMap>$(AppOutputBase)=X:\$(AssemblyName)\</PathMap>-->
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(DefineConstants.Contains('CIBuild')) OR '$(NCrunch)' == '1'">
+    <DisableCopyToPlugins>True</DisableCopyToPlugins>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NCrunch)' == '1'">
+    <DisableCopyToPlugins>True</DisableCopyToPlugins>
+    <DisableZipRelease>True</DisableZipRelease>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BeatSaber.ViewSystem">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\BeatSaber.ViewSystem.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BeatSaverDownloader">
+      <HintPath>$(BeatSaberDir)\Plugins\BeatSaverDownloader.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BeatSaverSharp">
+      <HintPath>$(BeatSaberDir)\Libs\BeatSaverSharp.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BSML">
+      <HintPath>$(BeatSaberDir)\Plugins\BSML.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BS_Utils">
+      <HintPath>$(BeatSaberDir)\Plugins\BS_Utils.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Interactable">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\Interactable.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Mono.WebBrowser">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\Mono.WebBrowser.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="SongCore">
+      <HintPath>$(BeatSaberDir)\Plugins\SongCore.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\System.Net.Http.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Main">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\Main.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HMLib">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\HMLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HMUI">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\HMUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IPA.Loader">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\IPA.Loader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.VRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Zenject">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\Zenject.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Zenject-usage">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\Zenject-usage.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ZenjectExtension">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\ZenjectExtension.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DownloadFlowCoordinator.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="BeatSaberDiscordModFlowCoordinator.cs" />
+    <Compile Include="DiscordUnity\API\DiscordInterfaces.cs" />
+    <Compile Include="DiscordUnity\API\IDiscordAPIEvents.cs" />
+    <Compile Include="DiscordUnity\API\IDiscordChannelEvents.cs" />
+    <Compile Include="DiscordUnity\API\IDiscordInterface.cs" />
+    <Compile Include="DiscordUnity\API\IDiscordInviteEvents.cs" />
+    <Compile Include="DiscordUnity\API\IDiscordMessageEvents.cs" />
+    <Compile Include="DiscordUnity\API\IDiscordServerEvents.cs" />
+    <Compile Include="DiscordUnity\API\IDiscordStatusEvents.cs" />
+    <Compile Include="DiscordUnity\API\IDiscordVoiceEvents.cs" />
+    <Compile Include="DiscordUnity\API\IDiscordWebhookEvents.cs" />
+    <Compile Include="DiscordUnity\DiscordAPI.cs" />
+    <Compile Include="DiscordUnity\Logger.cs" />
+    <Compile Include="DiscordUnity\Models\ActivityModel.cs" />
+    <Compile Include="DiscordUnity\Models\AuditLogModel.cs" />
+    <Compile Include="DiscordUnity\Models\ChannelModel.cs" />
+    <Compile Include="DiscordUnity\Models\EmojiModel.cs" />
+    <Compile Include="DiscordUnity\Models\GatewayModel.cs" />
+    <Compile Include="DiscordUnity\Models\GuildModel.cs" />
+    <Compile Include="DiscordUnity\Models\HeartbeatModel.cs" />
+    <Compile Include="DiscordUnity\Models\IdentityModel.cs" />
+    <Compile Include="DiscordUnity\Models\InviteModel.cs" />
+    <Compile Include="DiscordUnity\Models\MessageModel.cs" />
+    <Compile Include="DiscordUnity\Models\OverwriteModel.cs" />
+    <Compile Include="DiscordUnity\Models\PayloadModel.cs" />
+    <Compile Include="DiscordUnity\Models\PremiumType.cs" />
+    <Compile Include="DiscordUnity\Models\PresenceModel.cs" />
+    <Compile Include="DiscordUnity\Models\ReadyModel.cs" />
+    <Compile Include="DiscordUnity\Models\ResumeModel.cs" />
+    <Compile Include="DiscordUnity\Models\RoleModel.cs" />
+    <Compile Include="DiscordUnity\Models\TypingModel.cs" />
+    <Compile Include="DiscordUnity\Models\UserModel.cs" />
+    <Compile Include="DiscordUnity\Models\VoiceStateModel.cs" />
+    <Compile Include="DiscordUnity\Rest\AuditLog.cs" />
+    <Compile Include="DiscordUnity\Rest\Channel.cs" />
+    <Compile Include="DiscordUnity\Rest\DiscordRest.cs" />
+    <Compile Include="DiscordUnity\Rest\Emoji.cs" />
+    <Compile Include="DiscordUnity\Rest\Gateway.cs" />
+    <Compile Include="DiscordUnity\Rest\Guild.cs" />
+    <Compile Include="DiscordUnity\Rest\Invite.cs" />
+    <Compile Include="DiscordUnity\Rest\User.cs" />
+    <Compile Include="DiscordUnity\Rest\Voice.cs" />
+    <Compile Include="DiscordUnity\Rest\Webhook.cs" />
+    <Compile Include="DiscordUnity\State\DiscordActivity.cs" />
+    <Compile Include="DiscordUnity\State\DiscordChannel.cs" />
+    <Compile Include="DiscordUnity\State\DiscordEmoji.cs" />
+    <Compile Include="DiscordUnity\State\DiscordInvite.cs" />
+    <Compile Include="DiscordUnity\State\DiscordMessage.cs" />
+    <Compile Include="DiscordUnity\State\DiscordPresence.cs" />
+    <Compile Include="DiscordUnity\State\DiscordRole.cs" />
+    <Compile Include="DiscordUnity\State\DiscordServer.cs" />
+    <Compile Include="DiscordUnity\State\DiscordState.cs" />
+    <Compile Include="DiscordUnity\State\DiscordUser.cs" />
+    <Compile Include="DiscordUnity\State\DiscordVoiceState.cs" />
+    <Compile Include="HttpClientFix.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Configuration\PluginConfig.cs" />
+    <Compile Include="BeatSaberDiscordModController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\BeatSaberDiscordModViewController.cs" />
+    <Compile Include="UI\DownloadViewController.cs" />
+    <Compile Include="UI\MyCustomCell.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="manifest.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Directory.Build.props" Condition="Exists('Directory.Build.props')" />
+    <None Include="BeatSaberDiscordMod.csproj.user" Condition="Exists('BeatSaberDiscordMod.csproj.user')" />
+    <EmbeddedResource Include="UI\BeatSaberDiscordModViewController.bsml">
+      <DependentUpon>BeatSaberDiscordModViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DownloadViewController.bsml">
+      <DependentUpon>DownloadViewController.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BeatSaberModdingTools.Tasks">
+      <Version>2.0.0-beta1</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="DSharpPlus">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="DSharpPlus.CommandsNext">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="DSharpPlus.SlashCommands">
+      <Version>4.5.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Plugins\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

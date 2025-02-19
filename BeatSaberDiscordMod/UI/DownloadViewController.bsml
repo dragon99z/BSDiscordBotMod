@@ -1,0 +1,9 @@
+﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+	xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'
+	>
+  <vertical id='downloadMenu' vertical-fit="PreferredSize" spacing="2">
+    <text text="Queued Maps:"/>
+    <text id="mapList"></text>
+    <button text="Download" on-click="download-maps"/>
+  </vertical>
+</bg>

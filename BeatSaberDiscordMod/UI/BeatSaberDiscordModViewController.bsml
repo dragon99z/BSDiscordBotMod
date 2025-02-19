@@ -1,0 +1,10 @@
+﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+	xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'
+	>
+  <vertical vertical-fit="PreferredSize" spacing="2">
+    <toggle-setting text="Mod Enabled" value="mod-enabled"></toggle-setting>
+    <string-setting text="Bot Token" value="bot-token"></string-setting>
+    <toggle-setting text="Auto Download Maps" value="auto-download-maps"></toggle-setting>
+    <string-setting text="Bot Userlist" value="user-list"></string-setting>
+  </vertical>
+</bg>
