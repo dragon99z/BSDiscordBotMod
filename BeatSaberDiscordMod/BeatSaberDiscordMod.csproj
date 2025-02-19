@@ -210,7 +210,6 @@
     <Compile Include="DiscordUnity\State\DiscordState.cs" />
     <Compile Include="DiscordUnity\State\DiscordUser.cs" />
     <Compile Include="DiscordUnity\State\DiscordVoiceState.cs" />
-    <Compile Include="HttpClientFix.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Configuration\PluginConfig.cs" />
     <Compile Include="BeatSaberDiscordModController.cs" />
